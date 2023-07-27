@@ -131,7 +131,7 @@
             "apiVersion": "2020-02-02-preview",
             "name": "angularrealworldfrontend",
             "type": "microsoft.insights/components",
-            "location": "eastus",
+            "location": "eastus2",
             "tags": {},
             "dependsOn": [
                 "newWorkspaceTemplate"
