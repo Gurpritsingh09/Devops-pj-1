@@ -131,7 +131,7 @@
             "apiVersion": "2020-02-02-preview",
             "name": "angularrealworldfrontend",
             "type": "microsoft.insights/components",
-            "location": "eastus2",
+            "location": "eastus",
             "tags": {},
             "dependsOn": [
                 "newWorkspaceTemplate"
@@ -162,7 +162,7 @@
                             "apiVersion": "2020-08-01",
                             "name": "DefaultWorkspace-b4e97e63-cda6-4f3f-bd39-6f3fbd0b03c0-EUS2",
                             "type": "Microsoft.OperationalInsights/workspaces",
-                            "location": "East US 2",
+                            "location": "East US",
                             "properties": {}
                         }
                     ],

@@ -33,7 +33,7 @@ node {
               resourceGroup='devops-pj-dev'
               deploymentName='bufalo-fullstack'
               az login --service-principal --username ${AZURE_CLIENT_ID} --password ${AZURE_CLIENT_SECRET} --tenant ${AZURE_TENANT_ID} # --subscription ${AZURE_SUBSCRIPTION_ID}
-              az group create -l eastus2 -n \$resourceGroup --subscription ${AZURE_SUBSCRIPTION_ID}
+              az group create -l eastus -n \$resourceGroup --subscription ${AZURE_SUBSCRIPTION_ID}
               az deployment group create --resource-group \$resourceGroup  --name \$deploymentName --template-file azureDeploy.json --parameters dev.parameters.json --parameters dockerRegistryPassword=${dockerPassword} --parameters linuxFxVersion="DOCKER|gurpritsingh/bufalo-fullstack:${env.BUILD_NUMBER}" --parameters databasePassword=$dbPass --parameters dockerRegistryPassword=${dockerPassword} --parameters databaseUrl='postgres://postgres:$dbPass@20.235.66.219:5432/gobuff_realworld_example_app_production?sslmode=disable' --parameters testDatabaseUrl='postgres://postgres:$dbPass@20.235.66.219:5432/gobuff_realworld_example_app_production?sslmode=disable' --parameters databaseHost='20.235.66.219' --parameters waitDbHosts='20.235.66.219:5432'
             """
           }
