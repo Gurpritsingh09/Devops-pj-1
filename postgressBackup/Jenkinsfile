@@ -9,7 +9,7 @@ pipeline {
         script {
           withCredentials([string(credentialsId: 'sshHostPassSecret', variable: 'pass')]) {
             sh"""
-            sshpass -p $pass ssh root@188.166.87.169
+            sshpass -p $pass ssh root@20.235.66.219
             echo "Login to Host successfull"
             docker exec -t realworld_postgres pg_dumpall -c -U user > postgres_dump.sql
             mv ./postgres_dump.sql /var/jenkins_home/postgressBackup/postgres_dump-${env.BUILD_NUMBER}.sql
