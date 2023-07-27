@@ -17,7 +17,7 @@ node {
       }
     }
     stage('Db Creation') {     
-      withCredentials([string(credentialsId: 'sshHostPassSecret', variable: 'pass'), string(credentialsId: 'databasePassword', variable: 'dbPass')]) {
+      withCredentials([string(credentialsId: 'databasePassword', variable: 'dbPass')]) {
         sh"""
         cd dbCreation
         docker-compose up -d
