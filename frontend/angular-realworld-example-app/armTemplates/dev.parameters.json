@@ -36,13 +36,13 @@
             "value": "1"
         },
         "linuxFxVersion": {
-            "value": "DOCKER|amit0wadhiani/angularrealworldfrontend"
+            "value": "DOCKER|gurpritsingh/angularrealworldfrontend"
         },
         "dockerRegistryUrl": {
             "value": "https://index.docker.io"
         },
         "dockerRegistryUsername": {
-            "value": "amit0wadhiani"
+            "value": "gurpritsingh"
         },
         "dockerRegistryPassword": {
             "value": null
