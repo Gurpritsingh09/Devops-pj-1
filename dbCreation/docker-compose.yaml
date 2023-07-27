@@ -1,0 +1,23 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+services:
+
+  rw_db:
+    image: postgres
+    restart: always
+    container_name: rw_db
+    hostname: rw_db
+    volumes:
+      - /root/buff_app/postgress:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: $dbPass
+      POSTGRES_DB: gobuff_realworld_example_app_development
+      POSTGRES_USER: postgres
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 1000:8080  #view data on port 1000

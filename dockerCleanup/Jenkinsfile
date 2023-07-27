@@ -1,0 +1,36 @@
+pipeline {
+  agent any
+  triggers {
+      cron('0 0,12 * * *')
+      }
+  stages {
+    stage('Cleanup'){
+      steps {
+        script {
+          cleanWs cleanWhenFailure: true, deleteDirs: true, disableDeferredWipeout: false
+        }
+      }
+    }
+    stage('Docker images cleanup with <none> tag') {
+      steps {
+        script {
+          withCredentials([string(credentialsId: 'sshHostPassSecret', variable: 'pass')]) {
+            sh"""
+            sshpass -p $pass ssh root@188.166.87.169
+            echo "Login to Host successfull"
+            docker system prune --volumes -f
+            """
+            }
+          }
+        }
+      }
+    }
+    post {
+      always {
+        script {
+          cleanWs cleanWhenFailure: true, deleteDirs: true, disableDeferredWipeout: false
+        }
+      }
+    }
+  }
+

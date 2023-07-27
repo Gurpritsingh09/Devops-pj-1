@@ -1,0 +1,13 @@
+node {
+     stage('Preparation') {
+        checkout scm
+        sh "git rev-parse --short HEAD > .git/commit-id"                        
+    }
+    stage('Stopping the servers') {  
+        sh"""
+            ls
+            docker-compose down
+        """
+        }
+    }
+

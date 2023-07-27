@@ -1,0 +1,61 @@
+{
+  "name": "ang2-conduit",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --configuration production  --base-href ./ && cp CNAME dist/CNAME",
+    "test": "ng test",
+    "lint": "ng lint --force",
+    "e2e": "ng e2e",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "private": true,
+  "resolutions": {
+    "webpack": "^5.0.0"
+  },
+  "dependencies": {
+    "@angular/animations": "12.1.1",
+    "@angular/common": "12.1.1",
+    "@angular/compiler": "12.1.1",
+    "@angular/core": "12.1.1",
+    "@angular/forms": "12.1.1",
+    "@angular/platform-browser": "12.1.1",
+    "@angular/platform-browser-dynamic": "12.1.1",
+    "@angular/router": "12.1.1",
+    "@angular/service-worker": "12.1.1",
+    "core-js": "^3.15.2",
+    "marked": "^2.1.3",
+    "ngx-quicklink": "^0.2.7",
+    "rxjs": "^7.1.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.1.0",
+    "@angular/cli": "^12.1.0",
+    "@angular/compiler-cli": "12.1.1",
+    "@angular/language-service": "12.1.1",
+    "@types/jasmine": "~3.7.7",
+    "@types/jasminewd2": "~2.0.9",
+    "@types/node": "^15.12.5",
+    "codelyzer": "^6.0.2",
+    "jasmine-core": "~3.7.1",
+    "jasmine-spec-reporter": "~7.0.0",
+    "karma": "~6.3.4",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-cli": "~2.0.0",
+    "karma-coverage-istanbul-reporter": "~3.0.3",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-html-reporter": "^1.6.0",
+    "pre-commit": "^1.2.2",
+    "protractor": "~7.0.0",
+    "ts-node": "~10.0.0",
+    "tslint": "~6.1.3",
+    "typescript": "4.3.5"
+  }
+}

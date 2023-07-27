@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "3bf7a28f-d361-46d7-b93b-e5ced4d6191c"
+        },
+        "name": {
+            "value": "angularrealworldfrontend"
+        },
+        "location": {
+            "value": "East US 2"
+        },
+        "hostingPlanName": {
+            "value": "ASP-amitRGdev-8ddc"
+        },
+        "serverFarmResourceGroup": {
+            "value": "amitRG-dev"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "sku": {
+            "value": "Free"
+        },
+        "skuCode": {
+            "value": "F1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "linuxFxVersion": {
+            "value": "DOCKER|amit0wadhiani/angularrealworldfrontend"
+        },
+        "dockerRegistryUrl": {
+            "value": "https://index.docker.io"
+        },
+        "dockerRegistryUsername": {
+            "value": "amit0wadhiani"
+        },
+        "dockerRegistryPassword": {
+            "value": null
+        },
+        "dockerRegistryStartupCommand": {
+            "value": ""
+        }
+    }
+}
