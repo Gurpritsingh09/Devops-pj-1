@@ -14,7 +14,7 @@ node {
       }
     }
    stage('Deploy to App Service') {
-        withCredentials([azureServicePrincipal('service-principal'), string(credentialsId: 'dockerPassword', variable: 'dockerPassword')]) {
+        withCredentials([azureServicePrincipal('Devops-free-trial-subs'), string(credentialsId: 'docker-gurpritsingh-password', variable: 'dockerPassword')]) {
           echo "Deploying to azure app service"
           sh """
               resourceGroup='amitRG-dev'

@@ -26,7 +26,7 @@ node {
         }
     }
     stage('Deploy to App Service') {
-        withCredentials([azureServicePrincipal('service-principal'), string(credentialsId: 'dockerPassword', variable: 'dockerPassword'), string(credentialsId: 'databasePassword', variable: 'dbPass')]) {
+        withCredentials([azureServicePrincipal('Devops-free-trial-subs'), string(credentialsId: 'docker-gurpritsingh-password', variable: 'dockerPassword'), string(credentialsId: 'databasePassword', variable: 'dbPass')]) {
           echo "Deploying to azure app service"
           sh """
               cd armTemplates

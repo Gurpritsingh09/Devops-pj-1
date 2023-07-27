@@ -1,1 +1,1 @@
-docker run -p 8090:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d jenkins-docker:az4
+sudo docker run -p 8090:8080 -p 50000:50000 --group-add $(stat -c '%g' /var/run/docker.sock) -v /home/azureuser/jenkins/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d gurpritsingh/devops-pj-jenkins:v1
