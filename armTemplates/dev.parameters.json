@@ -12,7 +12,7 @@
             "value": "East US"
         },
         "hostingPlanName": {
-            "value": "ASP-amitRGdev-8ddc"
+            "value": "ASP-devopspjRGdev-8ddc"
         },
         "serverFarmResourceGroup": {
             "value": "devops-pj-dev"
