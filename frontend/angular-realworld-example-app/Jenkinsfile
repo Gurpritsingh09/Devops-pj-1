@@ -17,7 +17,7 @@ node {
         withCredentials([azureServicePrincipal('Devops-free-trial-subs'), string(credentialsId: 'docker-gurpritsingh-password', variable: 'dockerPassword')]) {
           echo "Deploying to azure app service"
           sh """
-              resourceGroup='amitRG-dev'
+              resourceGroup='devops-pj-dev'
               deploymentName='angularrealworldfrontend'
               cd armTemplates
               az login --service-principal --username ${AZURE_CLIENT_ID} --password ${AZURE_CLIENT_SECRET} --tenant ${AZURE_TENANT_ID} # --subscription ${AZURE_SUBSCRIPTION_ID}

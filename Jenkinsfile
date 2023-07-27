@@ -30,7 +30,7 @@ node {
           echo "Deploying to azure app service"
           sh """
               cd armTemplates
-              resourceGroup='amitRG-dev'
+              resourceGroup='devops-pj-dev'
               deploymentName='bufalo-fullstack'
               az login --service-principal --username ${AZURE_CLIENT_ID} --password ${AZURE_CLIENT_SECRET} --tenant ${AZURE_TENANT_ID} # --subscription ${AZURE_SUBSCRIPTION_ID}
               az group create -l eastus2 -n \$resourceGroup --subscription ${AZURE_SUBSCRIPTION_ID}

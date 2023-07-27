@@ -15,7 +15,7 @@
             "value": "ASP-amitRGdev-8ddc"
         },
         "serverFarmResourceGroup": {
-            "value": "amitRG-dev"
+            "value": "devops-pj-dev"
         },
         "alwaysOn": {
             "value": false
